@@ -1,0 +1,124 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+    --background-clr: hsl(185, 75%, 39%);
+    --big-text-clr: hsl(229, 23%, 23%);
+    --regular-text-clr: hsl(227, 10%, 46%);
+    --neutral-clr: hsl(0, 0%, 59%, 0.25);
+
+    --name-stats-fs: 18px;
+    --main-ff: 'Kumbh Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    background-color:var(--background-clr);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position: -750px -600px, 150px 300px;
+    font-family: var(--main-ff);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin: 1.5rem;
+}
+
+.user {
+    border-bottom: 1px solid var(--neutral-clr);
+}
+
+.user img {
+    border-radius: 100%;
+    border: 6px solid white;
+    background-color: white;
+    position: relative;
+    bottom: 3.5rem;
+    margin: 0 auto -2.5rem auto;
+}
+
+.nameAge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameAge h1 {
+    font-size: var(--name-stats-fs);
+    color: var(--name-stats-fs);
+}
+
+.nameAge p {
+    margin: 0 0.5rem;
+    color: var(--regular-text-clr);
+}
+
+.city {
+    text-align: center;
+    color: var(--regular-text-clr);
+    font-size: 0.9rem;
+    margin: 0.7rem 0 1.3rem 0;
+}
+
+.stats {
+    display: flex;
+    text-align: center;
+    margin: 1.5rem 0.7rem;
+}
+
+.stats li {
+    list-style: none;
+}
+
+.statValue {
+    font-weight: var(--fw-bold);
+    color: var(--name-stats-fs);
+    font-size: var(--name-stats-fs);
+}
+
+.statType {
+    color: var(--regular-text-clr);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        background-position:-250px -500px, 650px 350px; 
+    }
+
+    .stats {
+        margin: 1.3rem 0.7rem;
+    }
+}
